@@ -13,6 +13,7 @@ gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
 gem 'active-fedora', github: 'projecthydra/active_fedora'
 gem 'hydra-editor', github: 'projecthydra/hydra-editor'
+gem 'marmotta'
 
 group :development do
   gem "spring"

@@ -207,6 +207,7 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     http_logger (0.5.1)
+    hurley (0.2)
     hydra-access-controls (9.2.2)
       active-fedora (~> 9.0)
       activesupport (~> 4.0)
@@ -288,6 +289,11 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    marmotta (0.3.1)
+      hurley
+      json-ld
+      rdf
+      sparql-client
     method_source (0.8.2)
     mime-types (2.6.2)
     mini_magick (4.3.3)
@@ -541,6 +547,7 @@ DEPENDENCIES
   hydra-works!
   jettywrapper
   jquery-rails
+  marmotta
   pry-byebug
   rack-timeout
   rails (~> 4.2.0)

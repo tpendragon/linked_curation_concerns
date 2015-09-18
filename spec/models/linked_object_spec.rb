@@ -3,7 +3,10 @@
 require 'rails_helper'
 
 describe LinkedObject do
-  it "should have some tests" do
-    skip "Add your tests here"
+  describe "#title" do
+    it "should be a MarmottaResource" do
+      subject.title << RDF::URI("http://test.com")
+      expect(subject.title.first.class).to eq MarmottaResource
+    end
   end
 end
