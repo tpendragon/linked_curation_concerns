@@ -8,6 +8,10 @@ gem "rails", "~> 4.2.0"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
 gem 'sqlite3'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns'
+gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
+gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
+gem 'active-fedora', github: 'projecthydra/active_fedora'
 
 group :development do
   gem "spring"
@@ -19,7 +23,7 @@ group :development, :test do
   gem "awesome_print"
   gem "pry-byebug"
   gem "factory_girl_rails"
-  gem "rspec-rails", "~> 3.3.0"
+  # gem "rspec-rails", "~> 3.3.0"
 end
 
 group :test do
