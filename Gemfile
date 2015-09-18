@@ -12,6 +12,7 @@ gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
 gem 'active-fedora', github: 'projecthydra/active_fedora'
+gem 'hydra-editor', github: 'projecthydra/hydra-editor'
 
 group :development do
   gem "spring"
@@ -36,4 +37,12 @@ end
 
 group :staging, :production do
   gem "rack-timeout"
+end
+
+gem 'rsolr', '~> 1.0.6'
+gem 'devise'
+gem 'devise-guests', '~> 0.3'
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'jettywrapper'
 end

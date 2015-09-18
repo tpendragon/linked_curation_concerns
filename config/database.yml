@@ -1,11 +1,11 @@
 development: &default
   adapter: sqlite3
-  database: linked_curation_concerns_development
+  database: 'db/linked_curation_concerns_development.sqlite3'
   pool: <%= ENV.fetch("DB_POOL", 5) %>
 
 test:
   <<: *default
-  database: linked_curation_concerns_test
+  database: 'db/linked_curation_concerns_test.sqlite3'
 
 production: &deploy
   encoding: utf8

@@ -10,6 +10,12 @@ require "sprockets/railtie"
 Bundler.require(*Rails.groups)
 module LinkedCurationConcerns
   class Application < Rails::Application
+    
+    config.generators do |g|
+      g.test_framework :rspec, :spec => true
+    end
+
+
     config.i18n.enforce_available_locales = true
     config.generators do |generate|
       generate.helper false
