@@ -25,4 +25,20 @@ class SolrDocument
   # Do content negotiation for AF models. 
 
   use_extension( Hydra::ContentNegotiation )
+
+
+  def [](key)
+    property(key).values
+  end
+
+  private
+
+  def property(key)
+    if key == "id"
+      SingularSolrProperty.new(key, _source[key])
+    else
+      EnrichedSolrPropertyResult.new(key, _source)
+    end
+  end
+
 end
