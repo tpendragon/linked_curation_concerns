@@ -2,7 +2,7 @@
 #  `rails generate curation_concerns:work LinkedObject`
 class LinkedObject < ActiveFedora::Base
   def self.property(property, opts)
-    super property, {class_name: MarmottaResource}.merge(opts)
+    super property, {class_name: LDFResource}.merge(opts)
   end
   apply_schema BasicMetadata,
     ActiveFedora::SchemaIndexingStrategy.new(
