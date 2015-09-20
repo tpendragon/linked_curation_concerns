@@ -20,7 +20,7 @@ class LDFResource < ActiveTriples::Resource
     private
 
     def response
-      @response ||= client.get(CGI.escape(uri.to_s)+".ttl")
+      @response ||= client.get(CGI.escape(uri.to_s))
     end
 
     def connection_uri
