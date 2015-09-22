@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe LabelEnhancement do
   subject { described_class.new(property) }
-  let(:property) { SolrProperty.new("title_ssim", value) }
+  let(:property) { SolrProperty.new("title_sim", value) }
   let(:value) { "http://localhost:40/1" }
 
   describe "#properties" do
@@ -13,7 +13,7 @@ RSpec.describe LabelEnhancement do
         property = subject.properties.first
         expect(property.values).to eq ["Test"]
         expect(property.key).to eq "title_preferred_label"
-        expect(property.solr_identifier).to eq "ssim"
+        expect(property.solr_identifier).to eq "sim"
       end
     end
     context "when there's no label" do
