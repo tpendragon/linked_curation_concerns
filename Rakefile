@@ -7,6 +7,9 @@ Rails.application.load_tasks
 task(:default).clear
 task default: [:spec]
 
+MARMOTTA_HOME = ENV['MARMOTTA_HOME'] || File.expand_path(File.join(Jettywrapper.app_root, 'jetty/marmotta'))
+Jettywrapper.url = "https://github.com/OregonDigital/hydra-marmotta-jetty/archive/develop.zip"
+
 if defined? RSpec
   task(:spec).clear
   RSpec::Core::RakeTask.new(:spec) do |t|
